@@ -11,41 +11,40 @@
 <!-- Tipografías Corporativas -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Cinzel:wght@400;500;600;700&family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;1,800&family=Carlito:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
   /* ==============================================================
      1. SISTEMA DE PALETAS DE COLORES Y VARIABLES (6 TEMAS)
      ============================================================== */
-  :root {
-    --font-main: 'Nunito', -apple-system, sans-serif;
-    --font-title: 'Cormorant Garamond', serif;
-    --font-subtitle: 'Cinzel', serif;
-    --font-calibri: Calibri, Carlito, 'Segoe UI', Arial, sans-serif;
-    --font-num: var(--font-calibri);
-    --on-accent: #0B1411;
+:root {
+    --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-title: 'Plus Jakarta Sans', 'Inter', sans-serif;
+    --font-subtitle: 'Plus Jakarta Sans', 'Inter', sans-serif;
+    --font-num: 'JetBrains Mono', 'Inter', monospace;
+    --on-accent: #090D16;
     --radius-sm: 6px;
-    --radius-md: 8px;
-    --radius-lg: 12px;
-    --radius: 12px;
+    --radius-md: 10px;
+    --radius-lg: 14px;
+    --radius: 14px;
 
-    /* TEMA POR DEFECTO: DARK (Bosque Oscuro y Dorado) */
-    --bg-body: #0B1411;
-    --bg-gradient: linear-gradient(145deg, #0B1411 0%, #070d0a 100%);
-    --header-bg: linear-gradient(160deg, rgba(11,20,17,.98) 0%, rgba(18,30,24,.96) 50%, rgba(11,20,17,.92) 100%);
-    --header-bg-solid: #121e18;
-    --header-title: #E5DECE;
-    --text-main: #E5DECE;
-    --text-muted: #84968C;
-    --text-tertiary: #5c7065;
-    --glass-bg: rgba(26,44,35, 0.6);
-    --glass-border: rgba(229, 222, 206, 0.12);
-    --card-bg: #121E18;
-    --input-bg: rgba(26,44,35,0.8);
-    --input-border: rgba(229,222,206,0.14);
-    --btn-bg: rgba(26,44,35,0.8);
-    --btn-hover: rgba(229,222,206,0.12);
-    --accent-gold: #B39266;
-    --neon-red: #ef4444;
+    /* 1. TEMA POR DEFECTO: DARK (Obsidian Tech & Cyan) */
+    --bg-body: #090D16;
+    --bg-gradient: radial-gradient(circle at top right, #111C33 0%, #090D16 55%, #060910 100%);
+    --header-bg: linear-gradient(180deg, rgba(15, 23, 42, 0.96) 0%, rgba(9, 13, 22, 0.94) 100%);
+    --header-bg-solid: #0F172A;
+    --header-title: #F8FAFC;
+    --text-main: #E2E8F0;
+    --text-muted: #94A3B8;
+    --text-tertiary: #64748B;
+    --glass-bg: rgba(30, 41, 59, 0.55);
+    --glass-border: rgba(148, 163, 184, 0.16);
+    --card-bg: #111827;
+    --input-bg: rgba(15, 23, 42, 0.85);
+    --input-border: rgba(148, 163, 184, 0.22);
+    --btn-bg: rgba(30, 41, 59, 0.75);
+    --btn-hover: rgba(148, 163, 184, 0.16);
+    --accent-gold: #38BDF8;
+    --neon-red: #F43F5E;
 
     --bg: var(--bg-body);
     --surface: var(--card-bg);
@@ -54,165 +53,165 @@
     --border-light: var(--input-border);
     --text: var(--text-main);
     --accent: var(--accent-gold);
-    --accent-glow: rgba(179, 146, 102, 0.25);
+    --accent-glow: rgba(56, 189, 248, 0.22);
 
-    --sys-green: #34d399;
-    --sys-yellow: #fbbf24;
-    --sys-orange: #fb923c;
-    --sys-red: #f87171;
+    --sys-green: #10B981;
+    --sys-yellow: #F59E0B;
+    --sys-orange: #FB923C;
+    --sys-red: #F87171;
 
-    --chart-1: #B39266; --chart-2: #34d399; --chart-3: #38bdf8; --chart-4: #f87171; --chart-5: #a78bfa;
-    --chart-6: #fb923c; --chart-7: #fbbf24; --chart-8: #2dd4bf; --chart-9: #84968C; --chart-10: #E5DECE;
+    --chart-1: #38BDF8; --chart-2: #10B981; --chart-3: #818CF8; --chart-4: #F43F5E; --chart-5: #A78BFA;
+    --chart-6: #FB923C; --chart-7: #FBBF24; --chart-8: #2DD4BF; --chart-9: #94A3B8; --chart-10: #E2E8F0;
   }
 
-  /* 2. LIGHT MODE (Crema / Arena Elegante) */
+  /* 2. LIGHT MODE (Frost & Indigo — SaaS Limpio) */
   body.light-mode {
-    --bg-body: #fdfbf7;
-    --bg-gradient: linear-gradient(145deg, #fdfbf7 0%, #EAE2D2 100%);
-    --header-bg: #EAE2D2;
-    --header-bg-solid: #eae2d2;
-    --header-title: #2d2822;
-    --text-main: #2d2822;
-    --text-muted: #6b6357;
-    --text-tertiary: #8c8273;
-    --glass-bg: rgba(234, 226, 210, 0.6);
-    --glass-border: #BDB2A0;
-    --card-bg: #EAE2D2;
-    --input-bg: #F5F0E6;
-    --input-border: #BDB2A0;
-    --btn-bg: #F5F0E6;
-    --btn-hover: #BDB2A0;
-    --accent-gold: #8c6751;
-    --neon-red: #dc2626;
-    --accent-glow: rgba(174, 138, 119, 0.25);
-
-    --sys-green: #15803d;
-    --sys-yellow: #d97706;
-    --sys-orange: #ea580c;
-    --sys-red: #dc2626;
-
-    --chart-1: #8c6751; --chart-2: #15803d; --chart-3: #0284c7; --chart-4: #dc2626; --chart-5: #7c3aed;
-    --chart-6: #ea580c; --chart-7: #d97706; --chart-8: #0d9488; --chart-9: #6b6357; --chart-10: #2d2822;
-  }
-
-  /* 3. THEME GRAY (Escala de Grises Minimalista) */
-  body.theme-gray {
-    --bg-body: #F4F5F6;
-    --bg-gradient: linear-gradient(145deg, #F4F5F6 0%, #E5E7EB 100%);
-    --header-bg: #E5E7EB;
-    --header-bg-solid: #e5e7eb;
-    --header-title: #374151;
-    --text-main: #374151;
-    --text-muted: #6B7280;
-    --text-tertiary: #9CA3AF;
-    --glass-bg: rgba(229, 231, 235, 0.6);
-    --glass-border: #D1D5DB;
+    --bg-body: #F8FAFC;
+    --bg-gradient: linear-gradient(145deg, #F8FAFC 0%, #EEF2F7 100%);
+    --header-bg: rgba(255, 255, 255, 0.94);
+    --header-bg-solid: #FFFFFF;
+    --header-title: #0F172A;
+    --text-main: #1E293B;
+    --text-muted: #64748B;
+    --text-tertiary: #94A3B8;
+    --glass-bg: rgba(241, 245, 249, 0.85);
+    --glass-border: #E2E8F0;
     --card-bg: #FFFFFF;
-    --input-bg: #F9FAFB;
-    --input-border: #D1D5DB;
-    --btn-bg: #F9FAFB;
-    --btn-hover: #D1D5DB;
-    --accent-gold: #4B5563;
-    --neon-red: #EF4444;
-    --accent-glow: rgba(75, 85, 99, 0.2);
+    --input-bg: #F8FAFC;
+    --input-border: #CBD5E1;
+    --btn-bg: #F1F5F9;
+    --btn-hover: #E2E8F0;
+    --accent-gold: #4F46E5;
+    --neon-red: #E11D48;
+    --accent-glow: rgba(79, 70, 229, 0.18);
 
-    --sys-green: #16a34a;
-    --sys-yellow: #ca8a04;
-    --sys-orange: #ea580c;
-    --sys-red: #dc2626;
+    --sys-green: #059669;
+    --sys-yellow: #D97706;
+    --sys-orange: #EA580C;
+    --sys-red: #DC2626;
 
-    --chart-1: #374151; --chart-2: #6B7280; --chart-3: #1f2937; --chart-4: #ef4444; --chart-5: #3b82f6;
-    --chart-6: #f59e0b; --chart-7: #10b981; --chart-8: #8b5cf6; --chart-9: #9CA3AF; --chart-10: #4B5563;
+    --chart-1: #4F46E5; --chart-2: #059669; --chart-3: #0284C7; --chart-4: #E11D48; --chart-5: #7C3AED;
+    --chart-6: #EA580C; --chart-7: #D97706; --chart-8: #0D9488; --chart-9: #64748B; --chart-10: #0F172A;
   }
 
-  /* 4. THEME BLUE (Azul Cielo Corporativo) */
+  /* 3. THEME GRAY (Monocromo Vercel / Apple) */
+  body.theme-gray {
+    --bg-body: #F4F4F5;
+    --bg-gradient: linear-gradient(145deg, #FAFAFA 0%, #F4F4F5 100%);
+    --header-bg: #FFFFFF;
+    --header-bg-solid: #FFFFFF;
+    --header-title: #09090B;
+    --text-main: #18181B;
+    --text-muted: #71717A;
+    --text-tertiary: #A1A1AA;
+    --glass-bg: rgba(244, 244, 245, 0.85);
+    --glass-border: #E4E4E7;
+    --card-bg: #FFFFFF;
+    --input-bg: #FAFAFA;
+    --input-border: #D4D4D8;
+    --btn-bg: #F4F4F5;
+    --btn-hover: #E4E4E7;
+    --accent-gold: #18181B;
+    --neon-red: #EF4444;
+    --accent-glow: rgba(24, 24, 27, 0.14);
+
+    --sys-green: #16A34A;
+    --sys-yellow: #CA8A04;
+    --sys-orange: #EA580C;
+    --sys-red: #DC2626;
+
+    --chart-1: #18181B; --chart-2: #52525B; --chart-3: #2563EB; --chart-4: #DC2626; --chart-5: #059669;
+    --chart-6: #D97706; --chart-7: #7C3AED; --chart-8: #0891B2; --chart-9: #A1A1AA; --chart-10: #3F3F46;
+  }
+
+  /* 4. THEME BLUE (Sky Pro — Texto Neutro Legible) */
   body.theme-blue {
-    --bg-body: #F0F9FF;
-    --bg-gradient: linear-gradient(145deg, #F0F9FF 0%, #E0F2FE 100%);
-    --header-bg: #E0F2FE;
-    --header-bg-solid: #e0f2fe;
+    --bg-body: #F0F7FF;
+    --bg-gradient: linear-gradient(145deg, #F8FBFF 0%, #EAF4FF 100%);
+    --header-bg: #FFFFFF;
+    --header-bg-solid: #FFFFFF;
     --header-title: #0C4A6E;
-    --text-main: #0284C7;
-    --text-muted: #0369A1;
-    --text-tertiary: #38bdf8;
-    --glass-bg: rgba(224, 242, 254, 0.6);
-    --glass-border: #BAE6FD;
+    --text-main: #0F172A;
+    --text-muted: #475569;
+    --text-tertiary: #94A3B8;
+    --glass-bg: rgba(224, 242, 254, 0.65);
+    --glass-border: #CFE4F9;
     --card-bg: #FFFFFF;
     --input-bg: #F8FAFC;
     --input-border: #BAE6FD;
-    --btn-bg: #FFFFFF;
-    --btn-hover: #BAE6FD;
+    --btn-bg: #F0F9FF;
+    --btn-hover: #E0F2FE;
     --accent-gold: #0284C7;
     --neon-red: #EF4444;
-    --accent-glow: rgba(2, 132, 199, 0.2);
+    --accent-glow: rgba(2, 132, 199, 0.18);
 
-    --sys-green: #10b981;
-    --sys-yellow: #f59e0b;
-    --sys-orange: #f97316;
-    --sys-red: #ef4444;
+    --sys-green: #059669;
+    --sys-yellow: #D97706;
+    --sys-orange: #EA580C;
+    --sys-red: #E11D48;
 
-    --chart-1: #0284C7; --chart-2: #0C4A6E; --chart-3: #38bdf8; --chart-4: #ef4444; --chart-5: #10b981;
-    --chart-6: #f59e0b; --chart-7: #6366f1; --chart-8: #ec4899; --chart-9: #0369A1; --chart-10: #7dd3fc;
+    --chart-1: #0284C7; --chart-2: #0F172A; --chart-3: #38BDF8; --chart-4: #E11D48; --chart-5: #10B981;
+    --chart-6: #F59E0B; --chart-7: #6366F1; --chart-8: #06B6D4; --chart-9: #64748B; --chart-10: #7DD3FC;
   }
 
-  /* 5. THEME PINK (Rosado Elegante) */
+  /* 5. THEME PINK (Rose Modern — Texto Neutro Legible) */
   body.theme-pink {
-    --bg-body: #FDF2F8;
-    --bg-gradient: linear-gradient(145deg, #FDF2F8 0%, #FCE7F3 100%);
-    --header-bg: #FCE7F3;
-    --header-bg-solid: #fce7f3;
-    --header-title: #831843;
-    --text-main: #9D174D;
-    --text-muted: #BE185D;
-    --text-tertiary: #f472b6;
-    --glass-bg: rgba(252, 231, 243, 0.6);
-    --glass-border: #FBCFE8;
+    --bg-body: #FFF5F7;
+    --bg-gradient: linear-gradient(145deg, #FFF9FA 0%, #FFEBF0 100%);
+    --header-bg: #FFFFFF;
+    --header-bg-solid: #FFFFFF;
+    --header-title: #881337;
+    --text-main: #18181B;
+    --text-muted: #6B7280;
+    --text-tertiary: #9CA3AF;
+    --glass-bg: rgba(255, 228, 230, 0.6);
+    --glass-border: #FECDD3;
     --card-bg: #FFFFFF;
-    --input-bg: #FFF1F2;
-    --input-border: #FBCFE8;
-    --btn-bg: #FFFFFF;
-    --btn-hover: #FBCFE8;
-    --accent-gold: #DB2777;
-    --neon-red: #EF4444;
-    --accent-glow: rgba(219, 39, 119, 0.2);
+    --input-bg: #FFF9FA;
+    --input-border: #FDA4AF;
+    --btn-bg: #FFF1F2;
+    --btn-hover: #FFE4E6;
+    --accent-gold: #E11D48;
+    --neon-red: #DC2626;
+    --accent-glow: rgba(225, 29, 72, 0.18);
 
-    --sys-green: #10b981;
-    --sys-yellow: #f59e0b;
-    --sys-orange: #f97316;
-    --sys-red: #e11d48;
+    --sys-green: #059669;
+    --sys-yellow: #D97706;
+    --sys-orange: #EA580C;
+    --sys-red: #BE123C;
 
-    --chart-1: #DB2777; --chart-2: #831843; --chart-3: #f472b6; --chart-4: #fb7185; --chart-5: #a855f7;
-    --chart-6: #f59e0b; --chart-7: #10b981; --chart-8: #ec4899; --chart-9: #BE185D; --chart-10: #fbcfe8;
+    --chart-1: #E11D48; --chart-2: #881337; --chart-3: #FB7185; --chart-4: #8B5CF6; --chart-5: #10B981;
+    --chart-6: #F59E0B; --chart-7: #0EA5E9; --chart-8: #EC4899; --chart-9: #6B7280; --chart-10: #FDA4AF;
   }
 
-  /* 6. THEME GREEN (Verde Institucional) */
+  /* 6. THEME GREEN (Emerald Clean — Verde Moderno) */
   body.theme-green {
-    --bg-body: #F2F8F5;
-    --bg-gradient: linear-gradient(145deg, #F2F8F5 0%, #E3EFE8 100%);
-    --header-bg: #E3EFE8;
-    --header-bg-solid: #e3efe8;
-    --header-title: #145C34;
-    --text-main: #1C452D;
-    --text-muted: #2E6B46;
-    --text-tertiary: #52b788;
-    --glass-bg: rgba(227, 239, 232, 0.6);
-    --glass-border: #A3C9B3;
+    --bg-body: #F3FAF7;
+    --bg-gradient: linear-gradient(145deg, #F8FDFB 0%, #E8F5EF 100%);
+    --header-bg: #FFFFFF;
+    --header-bg-solid: #FFFFFF;
+    --header-title: #064E3B;
+    --text-main: #0F291E;
+    --text-muted: #4B6B5C;
+    --text-tertiary: #7FA090;
+    --glass-bg: rgba(209, 250, 229, 0.55);
+    --glass-border: #C6E7D8;
     --card-bg: #FFFFFF;
-    --input-bg: #F8FBF9;
-    --input-border: #A3C9B3;
-    --btn-bg: #FFFFFF;
-    --btn-hover: #C2DCCF;
-    --accent-gold: #145C34;
-    --neon-red: #EF4444;
-    --accent-glow: rgba(20, 92, 52, 0.2);
+    --input-bg: #F8FCFA;
+    --input-border: #A7DCC5;
+    --btn-bg: #ECFDF5;
+    --btn-hover: #D1FAE5;
+    --accent-gold: #059669;
+    --neon-red: #DC2626;
+    --accent-glow: rgba(5, 150, 105, 0.18);
 
-    --sys-green: #15803d;
-    --sys-yellow: #d97706;
-    --sys-orange: #ea580c;
-    --sys-red: #dc2626;
+    --sys-green: #059669;
+    --sys-yellow: #D97706;
+    --sys-orange: #EA580C;
+    --sys-red: #DC2626;
 
-    --chart-1: #145C34; --chart-2: #2E6B46; --chart-3: #52b788; --chart-4: #dc2626; --chart-5: #d97706;
-    --chart-6: #0284c7; --chart-7: #16a34a; --chart-8: #0d9488; --chart-9: #1C452D; --chart-10: #A3C9B3;
+    --chart-1: #059669; --chart-2: #064E3B; --chart-3: #34D399; --chart-4: #DC2626; --chart-5: #D97706;
+    --chart-6: #0284C7; --chart-7: #10B981; --chart-8: #0D9488; --chart-9: #4B6B5C; --chart-10: #A7F3D0;
   }
 
   body.light-mode, body.theme-gray, body.theme-blue, body.theme-pink, body.theme-green { --on-accent: #FFFFFF; }
@@ -271,14 +270,13 @@
     flex-direction: column;
     gap: 2px;
   }
-  .header h1 {
+.header h1 {
     font-family: var(--font-title);
-    font-size: clamp(1.35rem, 2.2vw, 1.85rem);
-    font-weight: 700;
+    font-size: clamp(1.2rem, 1.9vw, 1.55rem);
+    font-weight: 800;
     color: var(--header-title);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    line-height: 1.1;
+    letter-spacing: -0.025em;
+    line-height: 1.15;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -289,15 +287,13 @@
     transition: color 0.4s ease;
   }
   .header-sub {
-    font-family: var(--font-subtitle);
-    font-size: 0.68rem;
-    color: var(--accent-gold);
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    font-weight: 700;
+    font-family: var(--font-main);
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    letter-spacing: 0.04em;
+    font-weight: 600;
     margin-top: 3px;
   }
-  
   .header-actions { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
   .action-row {
     display: flex;
@@ -784,8 +780,8 @@
     word-wrap: break-word;
     white-space: normal;
   }
-  .top-table tr:hover td, tr:hover td, .pl-table tr:hover td {
-    background: rgba(179, 146, 102, 0.07);
+.top-table tr:hover td, tr:hover td, .pl-table tr:hover td {
+    background: color-mix(in srgb, var(--accent-gold) 8%, transparent);
   }
 
   /* ==================== TAB 2: LISTADO Y ALERTAS ==================== */
@@ -823,11 +819,10 @@
     height: 34px;
     box-shadow: 0 4px 12px var(--accent-glow);
   }
-  .filter-btn:hover, .pl-btn-export:hover {
-    background: #ffffff;
-    border-color: #ffffff;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px var(--accent-glow);
+.filter-btn:hover, .pl-btn-export:hover {
+    filter: brightness(1.12);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px var(--accent-glow);
   }
 
   #tab-listado .table-wrap { flex: 1; overflow: auto; padding: 0 24px 24px; background: transparent; position: relative; z-index: 1; }
@@ -988,7 +983,7 @@
   .discontinued-row .btn-discontinue { filter: none; opacity: 1; }
 
   .pl-month-val { font-family: var(--font-num); color: var(--text-muted); font-size: 11px; text-align: right; }
-  .pl-prom { color: var(--accent-gold); font-weight: 800; font-family: var(--font-num); text-align: right; background: rgba(179, 146, 102, 0.08); }
+  .pl-prom { color: var(--accent-gold); font-weight: 800; font-family: var(--font-num); text-align: right; background: color-mix(in srgb, var(--accent-gold) 9%, transparent); }
   .pl-sug { color: var(--sys-yellow); font-weight: 800; font-family: var(--font-num); text-align: right; }
   .pl-qty-input {
     width: 90px;
@@ -1086,14 +1081,12 @@
 
   .empty { text-align: center; padding: 40px; color: var(--text-muted); font-size: 12px; font-weight: 600; }
 
-  /* ==============================================================
-     CALIBRI EN HOJAS (Dashboard, Listado, Comparador, Planificador y ventanas)
+/* ==============================================================
+     TIPOGRAFÍA MODERNA EN HOJAS (Inter + Plus Jakarta Sans + JetBrains Mono)
      ============================================================== */
   #main-content, .modal-overlay {
-    --font-main: var(--font-calibri);
-    --font-title: var(--font-calibri);
-    --font-subtitle: var(--font-calibri);
-    font-family: var(--font-calibri);
+    font-family: var(--font-main);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
   #main-content button, #main-content input, #main-content select, #main-content textarea,
   .modal-overlay button, .modal-overlay input, .modal-overlay select, .modal-overlay textarea { font-family: inherit; }
@@ -1252,13 +1245,13 @@
             </div>
             <div class="sm-section">
               <div class="sm-label">Paleta de colores</div>
-              <div class="theme-swatches">
-          <button type="button" class="theme-swatch" data-theme="dark" title="Oscuro" aria-label="Tema Oscuro" style="--sw-bg:#0B1411;--sw-ac:#B39266;" onclick="changeTheme('dark')"></button>
-          <button type="button" class="theme-swatch" data-theme="light" title="Arena" aria-label="Tema Arena" style="--sw-bg:#fdfbf7;--sw-ac:#8c6751;" onclick="changeTheme('light')"></button>
-          <button type="button" class="theme-swatch" data-theme="theme-gray" title="Gris" aria-label="Tema Gris" style="--sw-bg:#F4F5F6;--sw-ac:#4B5563;" onclick="changeTheme('theme-gray')"></button>
-          <button type="button" class="theme-swatch" data-theme="theme-blue" title="Azul" aria-label="Tema Azul" style="--sw-bg:#F0F9FF;--sw-ac:#0284C7;" onclick="changeTheme('theme-blue')"></button>
-          <button type="button" class="theme-swatch" data-theme="theme-pink" title="Rosado" aria-label="Tema Rosado" style="--sw-bg:#FDF2F8;--sw-ac:#DB2777;" onclick="changeTheme('theme-pink')"></button>
-          <button type="button" class="theme-swatch" data-theme="theme-green" title="Verde" aria-label="Tema Verde" style="--sw-bg:#F2F8F5;--sw-ac:#145C34;" onclick="changeTheme('theme-green')"></button>
+<div class="theme-swatches">
+          <button type="button" class="theme-swatch" data-theme="dark" title="Obsidian" aria-label="Tema Obsidian" style="--sw-bg:#090D16;--sw-ac:#38BDF8;" onclick="changeTheme('dark')"></button>
+          <button type="button" class="theme-swatch" data-theme="light" title="Frost Indigo" aria-label="Tema Frost Indigo" style="--sw-bg:#F8FAFC;--sw-ac:#4F46E5;" onclick="changeTheme('light')"></button>
+          <button type="button" class="theme-swatch" data-theme="theme-gray" title="Monocromo" aria-label="Tema Monocromo" style="--sw-bg:#F4F4F5;--sw-ac:#18181B;" onclick="changeTheme('theme-gray')"></button>
+          <button type="button" class="theme-swatch" data-theme="theme-blue" title="Sky Pro" aria-label="Tema Sky Pro" style="--sw-bg:#F0F7FF;--sw-ac:#0284C7;" onclick="changeTheme('theme-blue')"></button>
+          <button type="button" class="theme-swatch" data-theme="theme-pink" title="Rose Modern" aria-label="Tema Rose Modern" style="--sw-bg:#FFF5F7;--sw-ac:#E11D48;" onclick="changeTheme('theme-pink')"></button>
+          <button type="button" class="theme-swatch" data-theme="theme-green" title="Emerald" aria-label="Tema Emerald" style="--sw-bg:#F3FAF7;--sw-ac:#059669;" onclick="changeTheme('theme-green')"></button>
               </div>
             </div>
             <div class="sm-section">
@@ -1906,7 +1899,7 @@ function updateChartColors() {
     PIE_COLORS[6] = getCssVar('--chart-7', '#fbbf24'); PIE_COLORS[7] = getCssVar('--chart-8', '#2dd4bf'); PIE_COLORS[8] = getCssVar('--chart-9', '#84968C');
     PIE_COLORS[9] = getCssVar('--chart-10', '#E5DECE');
     Chart.defaults.color = getCssVar('--text-muted', '#84968C');
-    Chart.defaults.font.family = "Calibri, Carlito, 'Segoe UI', Arial, sans-serif";
+    Chart.defaults.font.family = "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif";
 }
 
 // GESTIÓN DE LAS 6 PALETAS DE COLORES
@@ -2645,7 +2638,7 @@ function renderBarChart(canvasId, labels, data1, label1, color1, data2, label2, 
       onHover: (e, elements) => { e.native.target.style.cursor = elements.length ? 'pointer' : 'default'; },
       plugins: { legend: { position: 'top', labels: { color: getCssVar('--text-main'), font: {size: 11}, boxWidth: 10 } }, tooltip: { backgroundColor: getCssVar('--card-bg'), borderColor: getCssVar('--accent-gold'), borderWidth: 1, titleColor: getCssVar('--text-main'), bodyColor: getCssVar('--text-main'), padding: 12, cornerRadius: 8 } },
       scales: { 
-          x: { title: { display: false }, grid: { color: 'rgba(179,146,102,0.08)', drawBorder: false }, ticks: { font: {size: 10}, color: getCssVar('--text-muted') } }, 
+          x: { title: { display: false }, grid: { color: getCssVar('--glass-border', 'rgba(148,163,184,0.12)'), drawBorder: false }, ticks: { font: {size: 10}, color: getCssVar('--text-muted') } }, 
           y: { title: { display: false }, grid: { display: false }, ticks: { color: getCssVar('--text-main'), font: {size: 11, weight: '600'} } } 
       }
     }
@@ -2665,7 +2658,7 @@ function renderLineChart(canvasId, labels, data, labelName, color, rawLabels) {
       plugins: { legend: { display: false }, tooltip: { backgroundColor: getCssVar('--card-bg'), borderColor: getCssVar('--accent-gold'), borderWidth: 1, titleColor: getCssVar('--text-main'), bodyColor: getCssVar('--text-main'), padding: 12, cornerRadius: 8, callbacks: { label: function(ctx) { return ' ' + fmt(ctx.raw) + ' transacciones'; } } } }, 
       scales: { 
           x: { title: { display: false }, grid: { display: false }, ticks: { color: getCssVar('--text-muted'), font: {size: 11} } }, 
-          y: { title: { display: false }, grid: { color: 'rgba(179,146,102,0.08)' }, ticks: { color: getCssVar('--text-muted'), font: {size: 11} } } 
+          y: { title: { display: false }, grid: { color: getCssVar('--glass-border', 'rgba(148,163,184,0.12)') }, ticks: { color: getCssVar('--text-muted'), font: {size: 11} } } 
       } 
     }
   });
@@ -2705,7 +2698,7 @@ function renderParetoChart(canvasId, labels, barData, lineData, barColor, lineCo
             },
             scales: {
                 x: { ticks: { display: false }, grid: { display: false } },
-                y: { type: 'linear', display: true, position: 'left', grid: { color: 'rgba(179,146,102,0.08)' }, ticks: { color: getCssVar('--text-muted'), font:{size:9}, callback: function(val) { return '$' + fmt(val/1000000) + 'M'; } } },
+                y: { type: 'linear', display: true, position: 'left', grid: { color: getCssVar('--glass-border', 'rgba(148,163,184,0.12)') }, ticks: { color: getCssVar('--text-muted'), font:{size:9}, callback: function(val) { return '$' + fmt(val/1000000) + 'M'; } } },
                 y1: { type: 'linear', display: true, position: 'right', grid: { display: false }, min: 0, max: 100, ticks: { color: lineColor, font:{size:9}, callback: function(val) { return val + '%'; } } }
             }
         }
