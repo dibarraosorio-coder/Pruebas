@@ -14,6 +14,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/open-props"> 
 <style>
+  <!-- Paletas externas desde GitHub (CDN) -->
+<link rel="stylesheet" href="https://unpkg.com/open-props">
+<link rel="stylesheet" href="https://unpkg.com/@radix-ui/colors@latest/slate-dark.css">
+<link rel="stylesheet" href="https://unpkg.com/@radix-ui/colors@latest/violet-dark.css">
+<link rel="stylesheet" href="https://unpkg.com/@radix-ui/colors@latest/cyan-dark.css">
+<link rel="stylesheet" href="https://unpkg.com/@catppuccin/palette/css/catppuccin.css">
   /* ==============================================================
      1. SISTEMA DE PALETAS DE COLORES Y VARIABLES (6 TEMAS)
      ============================================================== */
@@ -220,6 +226,107 @@
   }
 
   body.light-mode, body.theme-gray, body.theme-blue, body.theme-pink, body.theme-green { --on-accent: #FFFFFF; }
+  /* 7. OPEN PROPS — Cyber Neon (argyleink/open-props) */
+  body.theme-openprops {
+    --on-accent: #050814;
+    --bg-body: #04060E;
+    --bg-gradient:
+      radial-gradient(60% 45% at 10% 0%, rgba(34, 211, 238, 0.18) 0%, transparent 60%),
+      radial-gradient(50% 45% at 92% 8%, rgba(168, 85, 247, 0.18) 0%, transparent 60%),
+      #04060E;
+    --header-bg: rgba(7, 11, 22, 0.78);
+    --header-bg-solid: #090E1C;
+    --header-title: #F8FAFC;
+    --text-main: var(--gray-1, #F1F5F9);
+    --text-muted: var(--gray-5, #94A3B8);
+    --text-tertiary: var(--gray-6, #64748B);
+    --glass-bg: rgba(15, 23, 42, 0.55);
+    --glass-border: rgba(34, 211, 238, 0.18);
+    --card-bg: rgba(13, 19, 36, 0.68);
+    --input-bg: rgba(8, 13, 26, 0.85);
+    --input-border: rgba(34, 211, 238, 0.25);
+    --btn-bg: rgba(19, 29, 52, 0.78);
+    --btn-hover: rgba(34, 211, 238, 0.16);
+    --accent-gold: var(--cyan-4, #22D3EE);
+    --neon-red: var(--pink-5, #F43F5E);
+    --accent-glow: rgba(34, 211, 238, 0.3);
+
+    --sys-green: var(--teal-4, #2DD4BF);
+    --sys-yellow: var(--yellow-4, #FACC15);
+    --sys-orange: var(--orange-4, #FB923C);
+    --sys-red: var(--pink-5, #FB7185);
+
+    --chart-1: #22D3EE; --chart-2: #A855F7; --chart-3: #2DD4BF; --chart-4: #F43F5E; --chart-5: #6366F1;
+    --chart-6: #FB923C; --chart-7: #FACC15; --chart-8: #38BDF8; --chart-9: #94A3B8; --chart-10: #E2E8F0;
+  }
+
+  /* 8. RADIX UI — Linear / Vercel Dark (radix-ui/colors) */
+  body.theme-radix {
+    --on-accent: #FFFFFF;
+    --bg-body: var(--slate-1, #111113);
+    --bg-gradient:
+      radial-gradient(55% 40% at 80% 0%, rgba(110, 86, 207, 0.16) 0%, transparent 60%),
+      var(--slate-1, #111113);
+    --header-bg: rgba(17, 17, 19, 0.86);
+    --header-bg-solid: var(--slate-2, #18191B);
+    --header-title: var(--slate-12, #EDEEF0);
+    --text-main: var(--slate-12, #EDEEF0);
+    --text-muted: var(--slate-11, #B0B4BA);
+    --text-tertiary: var(--slate-9, #696E77);
+    --glass-bg: rgba(24, 25, 27, 0.72);
+    --glass-border: var(--slate-6, #363A3F);
+    --card-bg: rgba(24, 25, 27, 0.86);
+    --input-bg: var(--slate-3, #212225);
+    --input-border: var(--slate-7, #43484E);
+    --btn-bg: var(--slate-3, #212225);
+    --btn-hover: var(--slate-4, #272A2D);
+    --accent-gold: var(--violet-9, #6E56CF);
+    --neon-red: #E5484D;
+    --accent-glow: rgba(110, 86, 207, 0.32);
+
+    --sys-green: #30A46C;
+    --sys-yellow: #FFB224;
+    --sys-orange: #F76B15;
+    --sys-red: #E5484D;
+
+    --chart-1: var(--violet-9, #6E56CF); --chart-2: var(--cyan-9, #00A2C7); --chart-3: #30A46C; --chart-4: #E5484D; --chart-5: var(--violet-11, #BAA7FF);
+    --chart-6: #F76B15; --chart-7: #FFB224; --chart-8: var(--cyan-11, #4CCCE6); --chart-9: var(--slate-11, #B0B4BA); --chart-10: var(--slate-12, #EDEEF0);
+  }
+
+  /* 9. CATPPUCCIN — Mocha Tech (catppuccin/palette) */
+  body.theme-catppuccin {
+    --on-accent: var(--ctp-mocha-crust, #11111B);
+    --bg-body: var(--ctp-mocha-crust, #11111B);
+    --bg-gradient:
+      radial-gradient(55% 45% at 15% 0%, rgba(203, 166, 247, 0.14) 0%, transparent 60%),
+      radial-gradient(45% 40% at 88% 100%, rgba(116, 199, 236, 0.12) 0%, transparent 60%),
+      var(--ctp-mocha-crust, #11111B);
+    --header-bg: rgba(24, 24, 37, 0.85);
+    --header-bg-solid: var(--ctp-mocha-mantle, #181825);
+    --header-title: var(--ctp-mocha-text, #CDD6F4);
+    --text-main: var(--ctp-mocha-text, #CDD6F4);
+    --text-muted: var(--ctp-mocha-subtext0, #A6ADC8);
+    --text-tertiary: var(--ctp-mocha-overlay1, #7F849C);
+    --glass-bg: rgba(30, 30, 46, 0.72);
+    --glass-border: var(--ctp-mocha-surface1, #45475A);
+    --card-bg: rgba(30, 30, 46, 0.78);
+    --input-bg: var(--ctp-mocha-surface0, #313244);
+    --input-border: var(--ctp-mocha-surface1, #45475A);
+    --btn-bg: var(--ctp-mocha-surface0, #313244);
+    --btn-hover: var(--ctp-mocha-surface1, #45475A);
+    --accent-gold: var(--ctp-mocha-mauve, #CBA6F7);
+    --neon-red: var(--ctp-mocha-red, #F38BA8);
+    --accent-glow: rgba(203, 166, 247, 0.28);
+
+    --sys-green: var(--ctp-mocha-green, #A6E3A1);
+    --sys-yellow: var(--ctp-mocha-yellow, #F9E2AF);
+    --sys-orange: var(--ctp-mocha-peach, #FAB387);
+    --sys-red: var(--ctp-mocha-red, #F38BA8);
+
+    --chart-1: var(--ctp-mocha-mauve, #CBA6F7); --chart-2: var(--ctp-mocha-sapphire, #74C7EC); --chart-3: var(--ctp-mocha-green, #A6E3A1);
+    --chart-4: var(--ctp-mocha-red, #F38BA8); --chart-5: var(--ctp-mocha-peach, #FAB387); --chart-6: var(--ctp-mocha-yellow, #F9E2AF);
+    --chart-7: var(--ctp-mocha-pink, #F5C2E7); --chart-8: var(--ctp-mocha-teal, #94E2D5); --chart-9: var(--ctp-mocha-subtext0, #A6ADC8); --chart-10: var(--ctp-mocha-text, #CDD6F4);
+  }
 
   /* ==============================================================
      2. ARQUITECTURA FLEXBOX NATIVA Y DISEÑO GLASSMORPHISM
@@ -1271,6 +1378,9 @@
           <button type="button" class="theme-swatch" data-theme="theme-blue" title="Sky Pro" aria-label="Tema Sky Pro" style="--sw-bg:#F0F7FF;--sw-ac:#0284C7;" onclick="changeTheme('theme-blue')"></button>
           <button type="button" class="theme-swatch" data-theme="theme-pink" title="Rose Modern" aria-label="Tema Rose Modern" style="--sw-bg:#FFF5F7;--sw-ac:#E11D48;" onclick="changeTheme('theme-pink')"></button>
           <button type="button" class="theme-swatch" data-theme="theme-green" title="Emerald" aria-label="Tema Emerald" style="--sw-bg:#F3FAF7;--sw-ac:#059669;" onclick="changeTheme('theme-green')"></button>
+          <button type="button" class="theme-swatch" data-theme="theme-openprops" title="Open Props · Cyber" aria-label="Tema Open Props" style="--sw-bg:#04060E;--sw-ac:#22D3EE;" onclick="changeTheme('theme-openprops')"></button>
+          <button type="button" class="theme-swatch" data-theme="theme-radix" title="Radix · Linear" aria-label="Tema Radix UI" style="--sw-bg:#111113;--sw-ac:#6E56CF;" onclick="changeTheme('theme-radix')"></button>
+          <button type="button" class="theme-swatch" data-theme="theme-catppuccin" title="Catppuccin · Mocha" aria-label="Tema Catppuccin" style="--sw-bg:#1E1E2E;--sw-ac:#CBA6F7;" onclick="changeTheme('theme-catppuccin')"></button>
               </div>
             </div>
             <div class="sm-section">
@@ -1922,12 +2032,13 @@ function updateChartColors() {
 }
 
 // GESTIÓN DE LAS 6 PALETAS DE COLORES
-const themes = ['dark', 'light', 'theme-gray', 'theme-blue', 'theme-pink', 'theme-green'];
+const themes = ['dark', 'light', 'theme-gray', 'theme-blue', 'theme-pink', 'theme-green', 'theme-openprops', 'theme-radix', 'theme-catppuccin'];
 let currentThemeIndex = 0;
 
 function applyThemeClass(themeName) {
-    document.body.classList.remove('light-mode', 'theme-gray', 'theme-blue', 'theme-pink', 'theme-green');
+    document.body.classList.remove('light-mode', 'theme-gray', 'theme-blue', 'theme-pink', 'theme-green', 'theme-openprops', 'theme-radix', 'theme-catppuccin', 'dark');
     if (themeName === 'light') document.body.classList.add('light-mode');
+    else if (themeName === 'theme-radix') document.body.classList.add('theme-radix', 'dark');
     else if (themeName !== 'dark') document.body.classList.add(themeName);
 }
 
